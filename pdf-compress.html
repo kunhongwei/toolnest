@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ToolNest — Free Online Tools for Writers & Students</title>
+<title>Compress PDF Online Free — Reduce PDF File Size in Browser | ToolNest</title>
+<meta name="description" content="Compress PDF files online for free. Reduce PDF file size directly in your browser — your files never leave your device. No upload, no signup, no limits.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Compress PDF","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"}}</script>
 <meta name="description" content="Free online tools: random animal generator, word counter, words-to-pages converter, reading time calculator, text case converter and lorem ipsum generator. No signup, 100% free.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪺</text></svg>">
 <style>
@@ -116,6 +118,46 @@ a.btn-link{color:var(--accent);text-decoration:none;font-weight:600;font-size:.8
 </div>
 
 </main>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Compress PDF","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"}}</script>
+</head>
+<main>
+<div class="tool-head">
+  <h1>Compress PDF</h1>
+  <p>Shrink PDF file size right in your browser. <b>Your file never leaves your device</b> — no upload, no waiting in queue, no signup, no file size limits.</p>
+</div>
+
+<div class="panel">
+  <label for="file">Choose a PDF file</label>
+  <input type="file" id="file" accept="application/pdf">
+  <div class="radio-row">
+    <label><input type="radio" name="q" value="0.6" checked> Strong compression (smaller, lower image quality)</label>
+    <label><input type="radio" name="q" value="0.8"> Balanced</label>
+    <label><input type="radio" name="q" value="0.92"> Light compression (best quality)</label>
+  </div>
+  <button id="go" disabled>Compress PDF</button>
+  <div class="result" id="res" style="display:none"></div>
+  <a id="dl" style="display:none" class="btn-link" href="#">⬇ Download compressed PDF</a>
+</div>
+
+<div class="ad-slot">Advertisement</div>
+
+<section class="content">
+  <h2>How does it work?</h2>
+  <p>This tool re-renders each PDF page into an optimized image inside your own browser using JavaScript, then rebuilds a compact PDF. Because everything happens locally, your document is never uploaded to any server — making it safe for contracts, resumes and private documents.</p>
+  <p><b>How much smaller will it be?</b> Scanned PDFs often shrink by 60–90%. Text-heavy PDFs shrink less (they are already efficient). If quality matters, pick "Light compression".</p>
+</section>
+
+<div class="aff">
+  <h2>Need heavier-duty PDF editing?</h2>
+  <ul>
+    <li><span>📝 Adobe Acrobat — full PDF editing &amp; OCR (free trial)</span><a class="btn-link" href="#" rel="nofollow sponsored">Learn more →</a></li>
+    <li><span>📚 PDF guides &amp; books on Amazon</span><a class="btn-link" href="#" rel="nofollow sponsored">Browse →</a></li>
+  </ul>
+  <p class="disc">Affiliate disclosure: we may earn a commission at no extra cost to you.</p>
+</div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
 <script>
 const { PDFDocument } = PDFLib;
 pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
