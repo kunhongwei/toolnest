@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ToolNest — Free Online Tools for Writers & Students</title>
+<meta name="description" content="Free online tools: random animal generator, word counter, words-to-pages converter, reading time calculator, text case converter and lorem ipsum generator. No signup, 100% free.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪺</text></svg>">
+<style>
+:root{--bg:#faf7f2;--card:#ffffff;--ink:#22271f;--muted:#6b7263;--accent:#3d6b35;--accent2:#c96f2e;--border:#e6e1d6;--mono:'SFMono-Regular',Consolas,monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,'Times New Roman',serif;background:var(--bg);color:var(--ink);line-height:1.6}
+header{border-bottom:2px solid var(--ink);background:var(--card)}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+.hdr{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.logo{font-size:1.4rem;font-weight:700;letter-spacing:-.5px;text-decoration:none;color:var(--ink)}
+.logo span{color:var(--accent)}
+nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-family:system-ui,sans-serif;font-size:.9rem}
+nav a:hover{color:var(--accent)}
+.hero{padding:56px 0 40px;text-align:left}
+.hero h1{font-size:2.4rem;line-height:1.15;max-width:640px;letter-spacing:-1px}
+.hero p{color:var(--muted);max-width:560px;margin-top:14px;font-size:1.05rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;padding:10px 0 60px}
+.tool-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:22px;text-decoration:none;color:var(--ink);display:block;transition:box-shadow .15s,transform .15s}
+.tool-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.08);transform:translateY(-2px)}
+.tool-card h3{font-size:1.1rem;margin-bottom:6px}
+.tool-card p{color:var(--muted);font-size:.9rem;font-family:system-ui,sans-serif}
+.tool-card .tag{display:inline-block;margin-top:12px;font-size:.72rem;font-family:system-ui,sans-serif;color:var(--accent);border:1px solid var(--accent);border-radius:99px;padding:2px 10px}
+section.content{padding:30px 0}
+section.content h2{font-size:1.5rem;margin-bottom:10px}
+section.content p{color:var(--muted);max-width:680px;margin-bottom:12px}
+footer{border-top:1px solid var(--border);padding:28px 0;color:var(--muted);font-size:.85rem;font-family:system-ui,sans-serif}
+/* tool pages */
+.tool-head{padding:40px 0 8px}
+.tool-head h1{font-size:2rem;letter-spacing:-.5px}
+.tool-head p{color:var(--muted);margin-top:8px;max-width:640px}
+.panel{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:28px;margin:24px 0}
+label{display:block;font-family:system-ui,sans-serif;font-size:.85rem;font-weight:600;margin-bottom:6px;color:var(--ink)}
+textarea,input[type=number],input[type=text],select{width:100%;padding:12px;border:1px solid var(--border);border-radius:8px;font-size:1rem;font-family:var(--mono);background:var(--bg);color:var(--ink)}
+textarea{min-height:160px;resize:vertical}
+button{background:var(--accent);color:#fff;border:0;border-radius:8px;padding:12px 26px;font-size:1rem;font-family:system-ui,sans-serif;font-weight:600;cursor:pointer;margin-top:14px}
+button:hover{background:#2f5529}
+.btn2{background:var(--card);color:var(--accent);border:1px solid var(--accent);margin-left:10px}
+.btn2:hover{background:#eef4ec}
+.result{margin-top:20px;padding:20px;background:#f2f7f0;border:1px solid #cfe0ca;border-radius:8px;font-size:1.15rem;font-weight:600}
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-top:18px}
+.stat{background:#f4f1ea;border-radius:8px;padding:14px;text-align:center}
+.stat b{display:block;font-size:1.5rem;color:var(--accent)}
+.stat small{color:var(--muted);font-family:system-ui,sans-serif}
+.ad-slot{margin:32px 0;border:1px dashed var(--border);border-radius:10px;padding:34px;text-align:center;color:var(--muted);font-family:system-ui,sans-serif;font-size:.82rem;letter-spacing:1px;text-transform:uppercase;background:#fbfaf7}
+.aff{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;margin:32px 0}
+.aff h2{font-size:1.15rem;margin-bottom:4px}
+.aff p{color:var(--muted);font-size:.88rem;font-family:system-ui,sans-serif}
+.aff ul{list-style:none;margin-top:14px}
+.aff li{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--bg);font-family:system-ui,sans-serif;font-size:.92rem}
+.aff li:last-child{border:0}
+.aff .disc{color:#999;font-size:.75rem;margin-top:10px}
+a.btn-link{color:var(--accent);text-decoration:none;font-weight:600;font-size:.85rem}
+.back{display:inline-block;margin-top:10px;color:var(--accent);text-decoration:none;font-family:system-ui,sans-serif;font-size:.9rem}
+.radio-row{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0}
+.radio-row label{display:flex;align-items:center;gap:6px;font-weight:400;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:8px 14px;cursor:pointer;font-size:.9rem}
+.radio-row input{accent-color:var(--accent)}
+.animal-box{background:#f2f7f0;border:1px solid #cfe0ca;border-radius:12px;padding:44px 20px;text-align:center;margin-top:18px}
+.animal-box .emoji{font-size:5.5rem;line-height:1}
+.animal-box .name{font-size:1.6rem;font-weight:700;margin-top:12px}
+.animal-box .fact{color:var(--muted);font-family:system-ui,sans-serif;font-size:.95rem;margin-top:8px;max-width:460px;margin-left:auto;margin-right:auto}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;justify-content:center}
+.chip{background:var(--card);border:1px solid var(--border);border-radius:99px;padding:6px 16px;font-family:system-ui,sans-serif;font-size:.9rem;cursor:pointer}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+@media(max-width:600px){.hero h1{font-size:1.8rem}.hdr{flex-direction:column;gap:10px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap hdr">
+    <a class="logo" href="index.html">Tool<span>Nest</span></a>
+    <nav><a href="index.html#tools">All Tools</a><a href="index.html#about">About</a></nav>
+  </div>
+</header>
+<main class="wrap">
+<main class="wrap">
+
+<div class="tool-head">
+  <h1>Reading Time Calculator</h1>
+  <p>Paste any text and see how long it takes to read — at three speeds. Average adult reading pace is 225–250 words per minute.</p>
+</div>
+
+<div class="panel">
+  <label for="txt">Your text</label>
+  <textarea id="txt" placeholder="Paste your article, essay or speech here..."></textarea>
+  <div class="stat-grid">
+    <div class="stat"><b id="w">0</b><small>Words</small></div>
+    <div class="stat"><b id="slow">—</b><small>Slow (150 wpm)</small></div>
+    <div class="stat"><b id="avg">—</b><small>Average (225 wpm)</small></div>
+    <div class="stat"><b id="fast">—</b><small>Fast (350 wpm)</small></div>
+  </div>
+</div>
+
+<div class="ad-slot">Advertisement</div>
+
+<section class="content">
+  <h2>Why reading time matters</h2>
+  <p>Blog posts, speeches and presentations are often planned by minutes, not words. A typical 5-minute speech is about 1,100 words; a 10-minute read for a blog is roughly 2,200 words. Presenters speak slower (about 130 wpm) than silent readers, so don't reuse the same numbers for both.</p>
+</section>
+
+</main>
+<script>
+function fmt(min){if(min<1)return Math.round(min*60)+" sec";const m=Math.round(min);if(m<60)return m+" min";const h=Math.floor(m/60);return h+" hr "+(m%60?m%60+" min":"");}
+const t=document.getElementById("txt");
+t.addEventListener("input",()=>{
+const w=t.value.trim()?t.value.trim().split(/\s+/).length:0;
+document.getElementById("w").textContent=w;
+document.getElementById("slow").textContent=fmt(w/150);
+document.getElementById("avg").textContent=fmt(w/225);
+document.getElementById("fast").textContent=fmt(w/350);
+});
+</script>
+<footer>
+  <div class="wrap">
+    <p>ToolNest — free, no-signup online tools. © 2026 ToolNest. All rights reserved.</p>
+    <p style="margin-top:6px">Some links on this page may be affiliate links, which means we may earn a commission at no extra cost to you.</p>
+  </div>
+</footer>
+</body>
+</html>
