@@ -78,6 +78,22 @@ a.btn-link{color:var(--accent);text-decoration:none;font-weight:600;font-size:.8
 .chip:hover{border-color:var(--accent);color:var(--accent)}
 @media(max-width:600px){.hero h1{font-size:1.8rem}.hdr{flex-direction:column;gap:10px}}
 </style>
+
+<script>
+// Global error capture -> GA4 (visible in Reports > Engagement > Events as 'exception')
+window.addEventListener('error', function(e){
+  if (window.gtag) gtag('event','exception',{description:(e.message||'unknown').slice(0,100),fatal:false});
+});
+window.addEventListener('unhandledrejection', function(e){
+  if (window.gtag) gtag('event','exception',{description:('promise: '+(e.reason&&e.reason.message||e.reason||'unknown')).slice(0,100),fatal:false});
+});
+// Per-tool helpful vote (fires GA4 events 'tool_feedback' with tool+vote params)
+function toolNestFeedback(tool, vote){
+  if (window.gtag) gtag('event','tool_feedback',{tool_name:tool, vote:vote});
+  document.getElementById('fb-thanks').style.display='inline';
+  document.getElementById('fb-bar').style.display='none';
+}
+</script>
 </head>
 <body>
 <header>
@@ -105,6 +121,13 @@ a.btn-link{color:var(--accent);text-decoration:none;font-weight:600;font-size:.8
   </div>
 </div>
 
+
+<div id="fb-bar" style="margin:30px 0;padding:18px;border:1px solid var(--border);border-radius:10px;background:var(--card);font-family:system-ui,sans-serif;font-size:.95rem;text-align:center">
+  Was this tool helpful?
+  <button onclick="toolNestFeedback('reading-time','up')" style="margin:0 6px;padding:6px 18px;margin-top:0">👍 Yes</button>
+  <button onclick="toolNestFeedback('reading-time','down')" style="margin:0 6px;padding:6px 18px;margin-top:0;background:#eee;color:#333">👎 No</button>
+</div>
+<span id="fb-thanks" style="display:none;color:var(--accent);font-family:system-ui,sans-serif;font-size:.9rem">Thanks for your feedback!</span>
 <div class="ad-slot">Advertisement</div>
 
 <section class="content">

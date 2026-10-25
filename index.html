@@ -78,6 +78,22 @@ a.btn-link{color:var(--accent);text-decoration:none;font-weight:600;font-size:.8
 .chip:hover{border-color:var(--accent);color:var(--accent)}
 @media(max-width:600px){.hero h1{font-size:1.8rem}.hdr{flex-direction:column;gap:10px}}
 </style>
+
+<script>
+// Global error capture -> GA4 (visible in Reports > Engagement > Events as 'exception')
+window.addEventListener('error', function(e){
+  if (window.gtag) gtag('event','exception',{description:(e.message||'unknown').slice(0,100),fatal:false});
+});
+window.addEventListener('unhandledrejection', function(e){
+  if (window.gtag) gtag('event','exception',{description:('promise: '+(e.reason&&e.reason.message||e.reason||'unknown')).slice(0,100),fatal:false});
+});
+// Per-tool helpful vote (fires GA4 events 'tool_feedback' with tool+vote params)
+function toolNestFeedback(tool, vote){
+  if (window.gtag) gtag('event','tool_feedback',{tool_name:tool, vote:vote});
+  document.getElementById('fb-thanks').style.display='inline';
+  document.getElementById('fb-bar').style.display='none';
+}
+</script>
 </head>
 <body>
 <header>
