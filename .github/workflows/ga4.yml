@@ -1,0 +1,26 @@
+name: GA4 daily report
+on:
+  schedule:
+    - cron: "0 1 * * *"   # 01:00 UTC = 09:00 Beijing
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install requests pyjwt
+      - name: Query GA4
+        env:
+          GA4_KEY: ${{ secrets.GA4_KEY }}
+        run: python .github/scripts/ga4_pull.py
+      - name: Commit report
+        run: |
+          git config user.email bot@toolnest.local
+          git config user.name "GA4 Bot"
+          git add ga4-report.json
+          git commit -m "GA4 daily report" || echo "no changes"
+          git push
