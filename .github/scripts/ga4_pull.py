@@ -1,4 +1,4 @@
-import json, time, os, jwt, requests
+import json, time, os, base64, jwt, requests
 key = json.loads(base64.b64decode(os.environ["GA4_KEY"]))
 now = int(time.time())
 assertion = jwt.encode({"iss": key["client_email"], "scope":"https://www.googleapis.com/auth/analytics.readonly",
