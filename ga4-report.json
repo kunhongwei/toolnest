@@ -1,0 +1,195 @@
+{
+ "generated": "2026-10-25 14:15 UTC",
+ "last7": {
+  "daily": [
+   {
+    "dimensionValues": [
+     {
+      "value": "20261019"
+     }
+    ],
+    "metricValues": [
+     {
+      "value": "1"
+     },
+     {
+      "value": "1"
+     }
+    ]
+   }
+  ],
+  "pages": [
+   {
+    "dimensionValues": [
+     {
+      "value": "/toolnest/"
+     }
+    ],
+    "metricValues": [
+     {
+      "value": "1"
+     },
+     {
+      "value": "1"
+     }
+    ]
+   }
+  ],
+  "countries": [
+   {
+    "dimensionValues": [
+     {
+      "value": "South Africa"
+     }
+    ],
+    "metricValues": [
+     {
+      "value": "1"
+     }
+    ]
+   }
+  ],
+  "events": [
+   {
+    "dimensionValues": [
+     {
+      "value": "first_visit"
+     }
+    ],
+    "metricValues": [
+     {
+      "value": "1"
+     }
+    ]
+   },
+   {
+    "dimensionValues": [
+     {
+      "value": "page_view"
+     }
+    ],
+    "metricValues": [
+     {
+      "value": "1"
+     }
+    ]
+   },
+   {
+    "dimensionValues": [
+     {
+      "value": "session_start"
+     }
+    ],
+    "metricValues": [
+     {
+      "value": "1"
+     }
+    ]
+   }
+  ],
+  "sources": [
+   {
+    "dimensionValues": [
+     {
+      "value": "Direct"
+     }
+    ],
+    "metricValues": [
+     {
+      "value": "1"
+     }
+    ]
+   }
+  ]
+ },
+ "last30": {
+  "pages": [
+   {
+    "dimensionValues": [
+     {
+      "value": "/toolnest/"
+     }
+    ],
+    "metricValues": [
+     {
+      "value": "4"
+     }
+    ]
+   },
+   {
+    "dimensionValues": [
+     {
+      "value": "/toolnest/random-animal-generator.html"
+     }
+    ],
+    "metricValues": [
+     {
+      "value": "1"
+     }
+    ]
+   },
+   {
+    "dimensionValues": [
+     {
+      "value": "/toolnest/word-counter.html"
+     }
+    ],
+    "metricValues": [
+     {
+      "value": "1"
+     }
+    ]
+   },
+   {
+    "dimensionValues": [
+     {
+      "value": "/toolnest/words-to-pages.html"
+     }
+    ],
+    "metricValues": [
+     {
+      "value": "1"
+     }
+    ]
+   }
+  ],
+  "countries": [
+   {
+    "dimensionValues": [
+     {
+      "value": "United States"
+     }
+    ],
+    "metricValues": [
+     {
+      "value": "4"
+     }
+    ]
+   },
+   {
+    "dimensionValues": [
+     {
+      "value": "(not set)"
+     }
+    ],
+    "metricValues": [
+     {
+      "value": "2"
+     }
+    ]
+   },
+   {
+    "dimensionValues": [
+     {
+      "value": "South Africa"
+     }
+    ],
+    "metricValues": [
+     {
+      "value": "1"
+     }
+    ]
+   }
+  ]
+ }
+}
