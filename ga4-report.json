@@ -1,106 +1,11 @@
 {
- "generated": "2026-10-26 05:57 UTC",
+ "generated": "2026-10-27 06:08 UTC",
  "last7": {
-  "daily": [
-   {
-    "dimensionValues": [
-     {
-      "value": "20261019"
-     }
-    ],
-    "metricValues": [
-     {
-      "value": "1"
-     },
-     {
-      "value": "1"
-     }
-    ]
-   }
-  ],
-  "pages": [
-   {
-    "dimensionValues": [
-     {
-      "value": "/toolnest/"
-     }
-    ],
-    "metricValues": [
-     {
-      "value": "1"
-     },
-     {
-      "value": "1"
-     }
-    ]
-   }
-  ],
-  "countries": [
-   {
-    "dimensionValues": [
-     {
-      "value": "South Africa"
-     }
-    ],
-    "metricValues": [
-     {
-      "value": "1"
-     }
-    ]
-   }
-  ],
-  "events": [
-   {
-    "dimensionValues": [
-     {
-      "value": "first_visit"
-     }
-    ],
-    "metricValues": [
-     {
-      "value": "1"
-     }
-    ]
-   },
-   {
-    "dimensionValues": [
-     {
-      "value": "page_view"
-     }
-    ],
-    "metricValues": [
-     {
-      "value": "1"
-     }
-    ]
-   },
-   {
-    "dimensionValues": [
-     {
-      "value": "session_start"
-     }
-    ],
-    "metricValues": [
-     {
-      "value": "1"
-     }
-    ]
-   }
-  ],
-  "sources": [
-   {
-    "dimensionValues": [
-     {
-      "value": "Direct"
-     }
-    ],
-    "metricValues": [
-     {
-      "value": "1"
-     }
-    ]
-   }
-  ]
+  "daily": [],
+  "pages": [],
+  "countries": [],
+  "events": [],
+  "sources": []
  },
  "last30": {
   "pages": [
