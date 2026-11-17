@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-16 07:50 UTC",
+ "generated": "2026-11-17 08:58 UTC",
  "last7": {
   "daily": [],
   "pages": [],
@@ -17,72 +17,12 @@
     ],
     "metricValues": [
      {
-      "value": "4"
-     }
-    ]
-   },
-   {
-    "dimensionValues": [
-     {
-      "value": "/toolnest/random-animal-generator.html"
-     }
-    ],
-    "metricValues": [
-     {
-      "value": "1"
-     }
-    ]
-   },
-   {
-    "dimensionValues": [
-     {
-      "value": "/toolnest/word-counter.html"
-     }
-    ],
-    "metricValues": [
-     {
-      "value": "1"
-     }
-    ]
-   },
-   {
-    "dimensionValues": [
-     {
-      "value": "/toolnest/words-to-pages.html"
-     }
-    ],
-    "metricValues": [
-     {
       "value": "1"
      }
     ]
    }
   ],
   "countries": [
-   {
-    "dimensionValues": [
-     {
-      "value": "United States"
-     }
-    ],
-    "metricValues": [
-     {
-      "value": "4"
-     }
-    ]
-   },
-   {
-    "dimensionValues": [
-     {
-      "value": "(not set)"
-     }
-    ],
-    "metricValues": [
-     {
-      "value": "2"
-     }
-    ]
-   },
    {
     "dimensionValues": [
      {
